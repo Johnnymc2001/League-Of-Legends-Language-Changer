@@ -1,5 +1,5 @@
 # Lol Language Changer
-- Change LOL Language
+- Change League Of Legend's Client Language
 
 # Requirement
 - This app required [.NET 6](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) to be installed on your computer to be able to run
