@@ -1,4 +1,4 @@
-# Lol Language Changer
+# League Of Legends Language Changer
 - Change League Of Legend's Client Language
 
 # Requirement
