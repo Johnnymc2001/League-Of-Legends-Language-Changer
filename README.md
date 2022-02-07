@@ -7,6 +7,7 @@
 # Usage
 - Run the application (LLCGUI.exe)
 - Language that's are not located in "..\Game\\DATA\\FINAL\\Localized" will only change HUD language, copy the "*.wad.client" file in for sound support.
+- Language : https://ddragon.leagueoflegends.com/cdn/languages.json
 
 # Implementation
 
