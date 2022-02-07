@@ -7,7 +7,7 @@
 # Usage
 - Run the application (LLCGUI.exe)
 - Language that's are not located in "..\Game\\DATA\\FINAL\\Localized" will only change HUD language, copy the "*.wad.client" file in for sound support.
-- The garena's token will be expired after **5 minutes** so remember to restart the game to get new token after it expire or the client will just hanging in the login phase.
+- The garena's token will be expired after **5 minutes**. After open the client for 5 minutes, changing the language will hang the client in login phase. If so, just reopen the client and try again.
 
 # Implementation
 
