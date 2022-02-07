@@ -134,5 +134,10 @@ namespace LLCGUI
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void pbThinh_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://www.facebook.com/thinh.thui.58");
+        }
     }
 }

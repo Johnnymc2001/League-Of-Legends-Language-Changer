@@ -42,10 +42,13 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.pbThinh = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbThinh)).BeginInit();
             this.SuspendLayout();
             // 
             // cbLanguage
@@ -176,6 +179,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.label5);
+            this.tabPage2.Controls.Add(this.pbThinh);
             this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
@@ -204,6 +209,26 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Made by johnnymc2001@gmail.com";
             // 
+            // pbThinh
+            // 
+            this.pbThinh.Image = global::LLCGUI.Properties.Resources.vivaldi_uggeTkIy9u;
+            this.pbThinh.Location = new System.Drawing.Point(9, 21);
+            this.pbThinh.Name = "pbThinh";
+            this.pbThinh.Size = new System.Drawing.Size(48, 47);
+            this.pbThinh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbThinh.TabIndex = 2;
+            this.pbThinh.TabStop = false;
+            this.pbThinh.Click += new System.EventHandler(this.pbThinh_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(63, 28);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(218, 30);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "<--- This is\r\ntôi đốt tiền vào bandcamp/suruya#6941";
+            // 
             // LLC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -226,6 +251,7 @@
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbThinh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -246,5 +272,7 @@
         private TabPage tabPage2;
         private Label label4;
         private Label label3;
+        private Label label5;
+        private PictureBox pbThinh;
     }
 }
