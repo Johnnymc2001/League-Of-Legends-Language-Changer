@@ -21,6 +21,8 @@ namespace LLCGUI
         ProcessData processData = null;
         string languageFolder = null;
 
+        string version = "v1.0";
+
         public LLC()
         {
             InitializeComponent();
@@ -81,6 +83,8 @@ namespace LLCGUI
             checkTimer.Elapsed += new ElapsedEventHandler(TimerTick);
             checkTimer.Interval = 5000;
             checkTimer.Start();
+
+            lblCurrentVersion.Text = version;
         }
 
         private void btnChange_Click(object sender, EventArgs e)
@@ -113,7 +117,7 @@ namespace LLCGUI
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Miao :3 ?");
+            MessageBox.Show("Nyanpasu~~ :3");
         }
 
         private void llLanguageFolder_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -124,6 +128,11 @@ namespace LLCGUI
                 UseShellExecute = true,
                 Verb = "open"
             });
+        }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }
