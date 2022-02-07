@@ -10,4 +10,4 @@
 
 # Implementation
 
-![Main](https://i.imgur.com/fl2i50p.png)
+![Main](https://i.imgur.com/I2Y42YW.png)
