@@ -19,6 +19,7 @@ namespace LLCGUI
         public static extern bool ReleaseCapture();
 
         ProcessData processData = null;
+        string languageFolder = null;
 
         public LLC()
         {
@@ -35,6 +36,12 @@ namespace LLCGUI
         {
             processData = ProcessLib.GetProcessData();
 
+            if (languageFolder == null && processData.languageFolder != null)
+            {
+                languageFolder = processData.languageFolder;
+                llLanguageFolder.Enabled = true;
+            };
+
             try
             {
                 if (processData.riotClient == null || processData.leagueClient == null)
@@ -46,7 +53,7 @@ namespace LLCGUI
                 cbLanguage.Items.Clear();
                 cbLanguage.Items.AddRange(processData.languages.ToArray());
 
-                txtClient.Text = $"Client Found! [{processData.languages.Count} languages found!]";
+                txtClient.Text = $"Current: [{processData.currentLanguage}]! [{processData.languages.Count} languages found!]";
                 stopPollingForClient();
             }
             catch
@@ -107,6 +114,16 @@ namespace LLCGUI
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Miao :3 ?");
+        }
+
+        private void llLanguageFolder_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo()
+            {
+                FileName = processData.languageFolder,
+                UseShellExecute = true,
+                Verb = "open"
+            });
         }
     }
 }

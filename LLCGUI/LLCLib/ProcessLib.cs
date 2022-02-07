@@ -42,8 +42,10 @@ namespace LLCLib
                         search.Add(file.Split("\\").Last().Replace("Global.", "").Replace(".wad.client", ""));
                     });
 
-                    processData.languages = search;
 
+                    processData.languages = search;
+                    processData.languageFolder = dirPath;
+                    processData.currentLanguage = GetCurrentLanguage(processData.riotClientCmd);
                 }
 
                 if (process.ProcessName.Equals("LeagueClient"))
@@ -55,6 +57,23 @@ namespace LLCLib
             return processData;
         }
 
+        public static string GetCurrentLanguage(string cmd)
+        {
+            Regex regex = new Regex(@"(--[\w\d\S]+)=([\w\d]+)");
+            List<Match> matches = regex.Matches(cmd).ToList();
+
+            foreach (Match match in matches)
+            {
+                var argName = match.Groups[1].Value;
+                if (argName.Contains("locale"))
+                {
+                    return match.Groups[2].Value;
+                }
+            }
+
+            return null;
+        }
+
         public static void RunGame(this ProcessData processData, string language)
         {
             try
@@ -64,24 +83,10 @@ namespace LLCLib
             }
             catch (Exception ex) { throw new Exception(); }
 
-
-
             string cmd = processData.riotClientCmd;
 
-            Regex regex = new Regex(@"(--[\w\d\S]+)=([\w\d]+)");
-            List<Match> matches = regex.Matches(cmd).ToList();
-
-            foreach (Match match in matches)
-            {
-                var argName = match.Groups[1].Value;
-                if (argName.Contains("locale"))
-                {
-                    var fullLocale = $"{match.Groups[1]}={match.Groups[2]}";
-                    cmd = cmd.Replace(fullLocale, $"--locale={language}");
-                }
-            }
-
-
+            var fullLocale = $"--locale={GetCurrentLanguage(cmd)}";
+            cmd = cmd.Replace(fullLocale, $"--locale={language}");
 
             Process newProcess = new Process();
             ProcessStartInfo startInfo = new ProcessStartInfo();

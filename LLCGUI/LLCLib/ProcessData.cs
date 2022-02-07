@@ -14,5 +14,8 @@ namespace LLCLib
 
         public Process leagueClient { get; set; } = null;
         public List<string> languages { get; set; } = null;
+
+        public string languageFolder { get; set; } = null;
+        public string currentLanguage { get; set; } = null;
     }
 }
