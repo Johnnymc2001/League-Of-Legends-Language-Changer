@@ -6,7 +6,7 @@
  
 # Usage
 - Run the application (LLCGUI.exe)
-- Language that's are not located in "..\Game\\DATA\\FINAL\\Localized" will only change HUD language, copy the "*.wad.client" file in for sound support.
+- Language that's are shown is located in "{LOL's Folder}\Game\\DATA\\FINAL\\Localized", you can use custom one if you want.
 - The garena's token will be expired after **5 minutes**. After open the client for 5 minutes, changing the language will hang the client in login phase. If so, just reopen the client and try again.
 
 # Implementation
