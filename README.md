@@ -1,8 +1,8 @@
 # League Of Legends Language Changer
 - Change League Of Legend's Client Language [Garena's Version]
 
-# Tutorial
-- LOL Voice Changer : https://youtu.be/M0VZUnWKz90
+# Tutorial [Not By Me]
+- Change LOL's Voice : https://youtu.be/M0VZUnWKz90
 - Demo : https://www.youtube.com/watch?v=zN0CKyWdYmQ
 
 # Requirement
