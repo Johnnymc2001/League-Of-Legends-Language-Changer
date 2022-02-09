@@ -40,10 +40,10 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pbThinh = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.pbThinh = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -53,32 +53,13 @@
             // 
             // cbLanguage
             // 
-            this.cbLanguage.AutoCompleteCustomSource.AddRange(new string[] {
-            "vn_VN",
-            "ja_JP",
-            "ko_KR",
-            "zh_CN",
-            "zh_TW",
-            "es_ES",
-            "es_MX",
-            "en_US",
-            "fr_FR",
-            "de_DE",
-            "it_IT",
-            "pl_PL",
-            "ro_RO",
-            "el_GR",
-            "pt_BR",
-            "hu_HU",
-            "ru_RU",
-            "tr_TR"});
-            this.cbLanguage.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cbLanguage.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.cbLanguage.FormattingEnabled = true;
             this.cbLanguage.Location = new System.Drawing.Point(5, 24);
             this.cbLanguage.Name = "cbLanguage";
             this.cbLanguage.Size = new System.Drawing.Size(126, 23);
             this.cbLanguage.TabIndex = 2;
+            this.cbLanguage.DropDownStyle = ComboBoxStyle.DropDownList;
             // 
             // btnChange
             // 
@@ -191,6 +172,26 @@
             this.tabPage2.Text = "About";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(63, 28);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(218, 30);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "<--- This is\r\ntôi đốt tiền vào bandcamp/suruya#6941";
+            // 
+            // pbThinh
+            // 
+            this.pbThinh.Image = global::LLCGUI.Properties.Resources.vivaldi_uggeTkIy9u;
+            this.pbThinh.Location = new System.Drawing.Point(9, 21);
+            this.pbThinh.Name = "pbThinh";
+            this.pbThinh.Size = new System.Drawing.Size(48, 47);
+            this.pbThinh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbThinh.TabIndex = 2;
+            this.pbThinh.TabStop = false;
+            this.pbThinh.Click += new System.EventHandler(this.pbThinh_Click);
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -208,26 +209,6 @@
             this.label3.Size = new System.Drawing.Size(202, 15);
             this.label3.TabIndex = 0;
             this.label3.Text = "Made by johnnymc2001@gmail.com";
-            // 
-            // pbThinh
-            // 
-            this.pbThinh.Image = global::LLCGUI.Properties.Resources.vivaldi_uggeTkIy9u;
-            this.pbThinh.Location = new System.Drawing.Point(9, 21);
-            this.pbThinh.Name = "pbThinh";
-            this.pbThinh.Size = new System.Drawing.Size(48, 47);
-            this.pbThinh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbThinh.TabIndex = 2;
-            this.pbThinh.TabStop = false;
-            this.pbThinh.Click += new System.EventHandler(this.pbThinh_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(63, 28);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(218, 30);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "<--- This is\r\ntôi đốt tiền vào bandcamp/suruya#6941";
             // 
             // LLC
             // 

@@ -21,7 +21,7 @@ namespace LLCGUI
         ProcessData processData = null;
         string languageFolder = null;
 
-        string version = "v1.0";
+        string version = "v1.1";
 
         public LLC()
         {
@@ -54,6 +54,7 @@ namespace LLCGUI
 
                 cbLanguage.Items.Clear();
                 cbLanguage.Items.AddRange(processData.languages.ToArray());
+                if (processData.languages.Count > 0) cbLanguage.SelectedIndex = 0;
 
                 txtClient.Text = $"Current: [{processData.currentLanguage}]! [{processData.languages.Count} languages found!]";
                 stopPollingForClient();
