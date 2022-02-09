@@ -38,33 +38,38 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblCurrentVersion = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabMain = new System.Windows.Forms.TabPage();
+            this.tabCommandLine = new System.Windows.Forms.TabPage();
+            this.txtCopyToClipboard = new System.Windows.Forms.Button();
+            this.txtCommandLine = new System.Windows.Forms.TextBox();
+            this.tabAbout = new System.Windows.Forms.TabPage();
             this.label5 = new System.Windows.Forms.Label();
             this.pbThinh = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnRefreshClient = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.tabMain.SuspendLayout();
+            this.tabCommandLine.SuspendLayout();
+            this.tabAbout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbThinh)).BeginInit();
             this.SuspendLayout();
             // 
             // cbLanguage
             // 
             this.cbLanguage.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.cbLanguage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbLanguage.FormattingEnabled = true;
-            this.cbLanguage.Location = new System.Drawing.Point(5, 24);
+            this.cbLanguage.Location = new System.Drawing.Point(6, 37);
             this.cbLanguage.Name = "cbLanguage";
             this.cbLanguage.Size = new System.Drawing.Size(126, 23);
             this.cbLanguage.TabIndex = 2;
-            this.cbLanguage.DropDownStyle = ComboBoxStyle.DropDownList;
             // 
             // btnChange
             // 
             this.btnChange.Enabled = false;
-            this.btnChange.Location = new System.Drawing.Point(137, 24);
+            this.btnChange.Location = new System.Drawing.Point(137, 37);
             this.btnChange.Name = "btnChange";
             this.btnChange.Size = new System.Drawing.Size(69, 23);
             this.btnChange.TabIndex = 5;
@@ -84,7 +89,7 @@
             // txtClient
             // 
             this.txtClient.AutoSize = true;
-            this.txtClient.Location = new System.Drawing.Point(4, 65);
+            this.txtClient.Location = new System.Drawing.Point(12, 139);
             this.txtClient.Name = "txtClient";
             this.txtClient.Size = new System.Drawing.Size(111, 15);
             this.txtClient.TabIndex = 7;
@@ -94,7 +99,7 @@
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(212, 6);
+            this.pictureBox1.Location = new System.Drawing.Point(212, 17);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(74, 71);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -106,7 +111,7 @@
             // 
             this.llLanguageFolder.AutoSize = true;
             this.llLanguageFolder.Enabled = false;
-            this.llLanguageFolder.Location = new System.Drawing.Point(5, 50);
+            this.llLanguageFolder.Location = new System.Drawing.Point(6, 76);
             this.llLanguageFolder.Name = "llLanguageFolder";
             this.llLanguageFolder.Size = new System.Drawing.Size(127, 15);
             this.llLanguageFolder.TabIndex = 11;
@@ -117,7 +122,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 122);
+            this.label2.Location = new System.Drawing.Point(12, 154);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 15);
             this.label2.TabIndex = 12;
@@ -126,7 +131,7 @@
             // lblCurrentVersion
             // 
             this.lblCurrentVersion.AutoSize = true;
-            this.lblCurrentVersion.Location = new System.Drawing.Point(72, 122);
+            this.lblCurrentVersion.Location = new System.Drawing.Point(59, 154);
             this.lblCurrentVersion.Name = "lblCurrentVersion";
             this.lblCurrentVersion.Size = new System.Drawing.Size(102, 15);
             this.lblCurrentVersion.TabIndex = 13;
@@ -134,48 +139,77 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabMain);
+            this.tabControl1.Controls.Add(this.tabCommandLine);
+            this.tabControl1.Controls.Add(this.tabAbout);
             this.tabControl1.Location = new System.Drawing.Point(8, 7);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(300, 111);
+            this.tabControl1.Size = new System.Drawing.Size(300, 122);
             this.tabControl1.TabIndex = 14;
             // 
-            // tabPage1
+            // tabMain
             // 
-            this.tabPage1.Controls.Add(this.cbLanguage);
-            this.tabPage1.Controls.Add(this.btnChange);
-            this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.llLanguageFolder);
-            this.tabPage1.Controls.Add(this.txtClient);
-            this.tabPage1.Controls.Add(this.pictureBox1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 24);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(292, 83);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Main";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabMain.Controls.Add(this.cbLanguage);
+            this.tabMain.Controls.Add(this.btnChange);
+            this.tabMain.Controls.Add(this.label1);
+            this.tabMain.Controls.Add(this.llLanguageFolder);
+            this.tabMain.Controls.Add(this.pictureBox1);
+            this.tabMain.Location = new System.Drawing.Point(4, 24);
+            this.tabMain.Name = "tabMain";
+            this.tabMain.Padding = new System.Windows.Forms.Padding(3);
+            this.tabMain.Size = new System.Drawing.Size(292, 94);
+            this.tabMain.TabIndex = 0;
+            this.tabMain.Text = "Main";
+            this.tabMain.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // tabCommandLine
             // 
-            this.tabPage2.Controls.Add(this.label5);
-            this.tabPage2.Controls.Add(this.pbThinh);
-            this.tabPage2.Controls.Add(this.label4);
-            this.tabPage2.Controls.Add(this.label3);
-            this.tabPage2.Location = new System.Drawing.Point(4, 24);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(292, 83);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "About";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabCommandLine.Controls.Add(this.txtCopyToClipboard);
+            this.tabCommandLine.Controls.Add(this.txtCommandLine);
+            this.tabCommandLine.Location = new System.Drawing.Point(4, 24);
+            this.tabCommandLine.Name = "tabCommandLine";
+            this.tabCommandLine.Size = new System.Drawing.Size(292, 94);
+            this.tabCommandLine.TabIndex = 2;
+            this.tabCommandLine.Text = "Command Line";
+            this.tabCommandLine.UseVisualStyleBackColor = true;
+            // 
+            // txtCopyToClipboard
+            // 
+            this.txtCopyToClipboard.Location = new System.Drawing.Point(173, 3);
+            this.txtCopyToClipboard.Name = "txtCopyToClipboard";
+            this.txtCopyToClipboard.Size = new System.Drawing.Size(114, 23);
+            this.txtCopyToClipboard.TabIndex = 1;
+            this.txtCopyToClipboard.Text = "Copy To Clipboard";
+            this.txtCopyToClipboard.UseVisualStyleBackColor = true;
+            this.txtCopyToClipboard.Click += new System.EventHandler(this.btnCopyToClipboard_Click);
+            // 
+            // txtCommandLine
+            // 
+            this.txtCommandLine.Location = new System.Drawing.Point(3, 32);
+            this.txtCommandLine.Multiline = true;
+            this.txtCommandLine.Name = "txtCommandLine";
+            this.txtCommandLine.Size = new System.Drawing.Size(286, 59);
+            this.txtCommandLine.TabIndex = 0;
+            // 
+            // tabAbout
+            // 
+            this.tabAbout.Controls.Add(this.label5);
+            this.tabAbout.Controls.Add(this.pbThinh);
+            this.tabAbout.Controls.Add(this.label4);
+            this.tabAbout.Controls.Add(this.label3);
+            this.tabAbout.Location = new System.Drawing.Point(4, 24);
+            this.tabAbout.Name = "tabAbout";
+            this.tabAbout.Padding = new System.Windows.Forms.Padding(3);
+            this.tabAbout.Size = new System.Drawing.Size(292, 94);
+            this.tabAbout.TabIndex = 1;
+            this.tabAbout.Text = "About";
+            this.tabAbout.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(63, 28);
+            this.label5.Location = new System.Drawing.Point(60, 38);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(218, 30);
             this.label5.TabIndex = 3;
@@ -184,7 +218,7 @@
             // pbThinh
             // 
             this.pbThinh.Image = global::LLCGUI.Properties.Resources.vivaldi_uggeTkIy9u;
-            this.pbThinh.Location = new System.Drawing.Point(9, 21);
+            this.pbThinh.Location = new System.Drawing.Point(6, 38);
             this.pbThinh.Name = "pbThinh";
             this.pbThinh.Size = new System.Drawing.Size(48, 47);
             this.pbThinh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -204,21 +238,33 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(84, 65);
+            this.label3.Location = new System.Drawing.Point(85, 76);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(202, 15);
             this.label3.TabIndex = 0;
             this.label3.Text = "Made by johnnymc2001@gmail.com";
+            // 
+            // btnRefreshClient
+            // 
+            this.btnRefreshClient.Location = new System.Drawing.Point(215, 146);
+            this.btnRefreshClient.Name = "btnRefreshClient";
+            this.btnRefreshClient.Size = new System.Drawing.Size(89, 23);
+            this.btnRefreshClient.TabIndex = 15;
+            this.btnRefreshClient.Text = "Refresh Client";
+            this.btnRefreshClient.UseVisualStyleBackColor = true;
+            this.btnRefreshClient.Click += new System.EventHandler(this.btnRefreshClient_Click);
             // 
             // LLC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(320, 139);
+            this.ClientSize = new System.Drawing.Size(311, 172);
+            this.Controls.Add(this.btnRefreshClient);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.lblCurrentVersion);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtClient);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -228,10 +274,12 @@
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
+            this.tabMain.ResumeLayout(false);
+            this.tabMain.PerformLayout();
+            this.tabCommandLine.ResumeLayout(false);
+            this.tabCommandLine.PerformLayout();
+            this.tabAbout.ResumeLayout(false);
+            this.tabAbout.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbThinh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -249,11 +297,15 @@
         private Label label2;
         private Label lblCurrentVersion;
         private TabControl tabControl1;
-        private TabPage tabPage1;
-        private TabPage tabPage2;
+        private TabPage tabMain;
+        private TabPage tabAbout;
         private Label label4;
         private Label label3;
         private Label label5;
         private PictureBox pbThinh;
+        private TabPage tabCommandLine;
+        private TextBox txtCommandLine;
+        private Button txtCopyToClipboard;
+        private Button btnRefreshClient;
     }
 }

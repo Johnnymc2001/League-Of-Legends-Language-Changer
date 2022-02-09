@@ -20,6 +20,19 @@ namespace LLCLib
             }
         }
 
+        public static List<String> ParseLanguagesFile(string dirPath)
+        {
+            List<string> search = new List<string>();
+
+            Directory.GetFiles(dirPath).ToList().ForEach(file =>
+            {
+                search.Add(file.Split("\\").Last().Replace("Global.", "").Replace(".wad.client", ""));
+            });
+
+
+            return search;
+        }
+
         public static ProcessData GetProcessData()
         {
             ProcessData processData = new ProcessData();
@@ -35,13 +48,7 @@ namespace LLCLib
                     var matches = regex.Matches(processData.riotClientCmd).ToList();
                     var dirPath = $"{matches[0].Groups[1]}Game\\DATA\\FINAL\\Localized";
 
-                    List<string> search = new List<string>();
-
-                    Directory.GetFiles(dirPath).ToList().ForEach(file =>
-                    {
-                        search.Add(file.Split("\\").Last().Replace("Global.", "").Replace(".wad.client", ""));
-                    });
-
+                    List<string> search = ParseLanguagesFile(dirPath);
 
                     processData.languages = search;
                     processData.languageFolder = dirPath;

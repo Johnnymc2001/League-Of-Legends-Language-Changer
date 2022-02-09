@@ -52,11 +52,21 @@ namespace LLCGUI
                     return;
                 }
 
+                txtCommandLine.Text = processData.riotClientCmd;
+
                 cbLanguage.Items.Clear();
                 cbLanguage.Items.AddRange(processData.languages.ToArray());
                 if (processData.languages.Count > 0) cbLanguage.SelectedIndex = 0;
 
+                //if (processData.leagueClient.StartTime.AddMinutes(5) < DateTime.Now)
+                //{
+                //    txtClient.Text = $"Current LOL Client had been opened for more than 5 minutes, the program may not work, please restart LOL Client ";
+
+                //}
+                //else
+                //{
                 txtClient.Text = $"Current: [{processData.currentLanguage}]! [{processData.languages.Count} languages found!]";
+                //}
                 stopPollingForClient();
             }
             catch
@@ -69,12 +79,14 @@ namespace LLCGUI
         private void pollingForClient()
         {
             btnChange.Enabled = false;
+            btnRefreshClient.Enabled = false;
             checkTimer.Start();
         }
 
         private void stopPollingForClient()
         {
             btnChange.Enabled = true;
+            btnRefreshClient.Enabled= true;
             checkTimer.Stop();
         }
 
@@ -143,6 +155,16 @@ namespace LLCGUI
                 FileName = "https://www.facebook.com/thinh.thui.58",
                 UseShellExecute = true,
             });
+        }
+
+        private void btnCopyToClipboard_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(processData.riotClientCmd);
+        }
+
+        private void btnRefreshClient_Click(object sender, EventArgs e)
+        {
+            pollingForClient();
         }
     }
 }
