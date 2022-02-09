@@ -10,7 +10,7 @@
  
 # Usage
 - Run the application (LLCGUI.exe)
-- Language that's are shown is located in "{LOL's Folder}\Game\\DATA\\FINAL\\Localized", you can use custom one if you want.
+- Language that are shown are the one located in "{LOL's Folder}\Game\\DATA\\FINAL\\Localized".
 - The garena's token will be expired after **5 minutes**. After open the client for 5 minutes, changing the language will hang the client in login phase. If so, just reopen the client and try again.
 
 # Implementation
