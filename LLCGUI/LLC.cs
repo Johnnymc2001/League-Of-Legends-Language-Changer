@@ -86,7 +86,7 @@ namespace LLCGUI
         private void stopPollingForClient()
         {
             btnChange.Enabled = true;
-            btnRefreshClient.Enabled= true;
+            btnRefreshClient.Enabled = true;
             checkTimer.Stop();
         }
 
@@ -165,6 +165,34 @@ namespace LLCGUI
         private void btnRefreshClient_Click(object sender, EventArgs e)
         {
             pollingForClient();
+        }
+
+        private void LLC_SizeChanged(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Minimized)
+            {
+                this.Hide();
+                notifyIcon1.Visible = true;
+            }
+        }
+
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            this.Show();
+            WindowState = FormWindowState.Normal;
+            notifyIcon1.Visible = false;
+        }
+
+        private void showToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Show();
+            WindowState = FormWindowState.Normal;
+            notifyIcon1.Visible = false;
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
